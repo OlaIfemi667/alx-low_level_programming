@@ -12,9 +12,9 @@ int main(void)
 
 	int i = 0;
 
-	while (lachaine[i]!= '\0')
+	while (lachaine[i] != '\0')
 	{
-		write(1,&lachaine[i],1);
+		write(1, &lachaine[i], 1);
 		i++;
 	}
 	return (1);
