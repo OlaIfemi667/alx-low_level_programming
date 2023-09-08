@@ -15,11 +15,11 @@ int main(void)
 
 	for (i = 0; i < 9; i++)
 	{
-		for (j = i+1; j < 10; j++)
+		for (j = i + 1; j < 10; j++)
 		{
 			putchar('0' + numbers[i]);
 			putchar('0' + numbers[j]);
-			if(numbers[i] != 8 || numbers[j] ==9)
+			if(numbers[i] != 8)
 			{
 				putchar(',');
 				putchar(' ');
