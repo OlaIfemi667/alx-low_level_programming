@@ -7,14 +7,15 @@
 int main(void)
 {
 	int numbers[10], i;
+
 	for (i = 0; i < 10; i++)
 	{
-		numbers[i]=i;
+		numbers[i] = i;
 	}
 
 	for (i = 0; i < 10; i++)
 	{
-		putchar('0'+numbers[i]);
+		putchar('0' + numbers[i]);
 	}
 	putchar('\n');
 	return (0);
