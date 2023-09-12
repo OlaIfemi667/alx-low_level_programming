@@ -4,7 +4,7 @@
  * c is the int correspondance of the char in ascii table
  * Return: 0 if lowercase and 1 otherwise
  */
-int _islower(int c)
+int _islower(int c)//c is the int correspondance of the char in ascii table
 {
 	if (c >= 97 && c <= 122)
 		return (1);
