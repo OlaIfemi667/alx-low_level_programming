@@ -5,12 +5,12 @@
  * Return: Always 0.
  *
  */
-int main (void)
+int main(void)
 {
 	char *mot = "_putchar";
 	int i = 0;
 
-	while (mot[i]!= '\0')
+	while (mot[i] != '\0')
 	{
 		putchar(mot[i]);
 		i++;
