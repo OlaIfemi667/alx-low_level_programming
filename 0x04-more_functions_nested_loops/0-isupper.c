@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _isupper - check the code.
+ * @a:  position ascii
+ * Return: Always 0.
+ */
 int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
