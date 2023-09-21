@@ -2,9 +2,9 @@
 
 /**
  * _strcat - check the code
- * *dest: string 
- * *src: string
- * Return: Always 0.
+ * @dest: string
+ * @src: string
+ * Return: final_dest
  */
 char *_strcat(char *dest, char *src)
 {
