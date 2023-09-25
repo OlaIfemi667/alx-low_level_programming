@@ -27,11 +27,10 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			to_return++;
 		}
-		else
+		if (compter <= 0)
 		{
-			goto end;
+			break;
 		}
 	}
-end:
 	return (to_return);
 }
