@@ -4,7 +4,7 @@
 /**
  * _strspn - copy buffer in hexa
  * @s:string
- * @accept: character to check
+ * @accepdsds: character to check
  * Return:to return
  */
 unsigned int _strspn(char *s, char *accept)
