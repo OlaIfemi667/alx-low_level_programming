@@ -29,8 +29,9 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		else
 		{
-			break;
+			goto end;
 		}
 	}
+end:
 	return (to_return);
 }
