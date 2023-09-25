@@ -11,7 +11,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j, compter, to_return;
 
-	to_return= 0;
+	to_return = 0;
 
 	for (i = 0 ; s[i] >= '\0' && compter == 0; i++)
 	{
@@ -26,9 +26,6 @@ unsigned int _strspn(char *s, char *accept)
 		if (compter > 0)
 		{
 			to_return++;
-		}
-		else
-		{
 		}
 	}
 	return (to_return);
