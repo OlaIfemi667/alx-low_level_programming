@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_chessboard - Affiche un tableau d'échecs (8x8) en console.
- *
- * @a: Le tableau d'échecs à afficher.
+ * set_string - Affiche un tableau d'échecs (8x8) en console.
+ * @s: pointer to a pointer
+ * @to: string
  */
 void set_string(char **s, char *to)
 {
