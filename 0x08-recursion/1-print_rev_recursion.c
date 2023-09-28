@@ -13,7 +13,7 @@ void _print_rev_recursion(char *s)
 {
 	char *p = '\0';
 
-	p = malloc(sizeof(char ));
+	p = malloc(sizeof(char));
 	if (*s != '\0')
 	{
 		p--;
@@ -21,5 +21,6 @@ void _print_rev_recursion(char *s)
 		s++;
 		_print_rev_recursion(s);
 	}
-	putchar(*p);
+	if (*p != '\0')
+		_putchar(*p);
 }
