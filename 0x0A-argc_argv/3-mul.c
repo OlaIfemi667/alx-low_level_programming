@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - main function
@@ -9,12 +10,19 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
+	int a;
+
+	int b;
+
+	if (argc == 3)
 	{
-		printf("%d\n", argv[0] * argv[1]);
+		a = atoi(argv[2]);
+		b = atoi(argv[1]);
+		printf("%d\n", a * b);
 	}
 	else
 	{
 		printf("Error\n");
+	}
 	return (0);
 }
