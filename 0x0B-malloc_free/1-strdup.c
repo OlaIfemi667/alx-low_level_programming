@@ -17,7 +17,6 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	
 	else
 	{
 		while (str[i] != '\0')
