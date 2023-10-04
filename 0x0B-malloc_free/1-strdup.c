@@ -17,19 +17,27 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	dupplicate = malloc(sizeof(*str));
 
 	i = 0;
-	if (dupplicate == NULL || str == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		while (str[i] != '\0')
+		dupplicate = malloc(sizeof(str));
+
+		if (dupplicate == NULL)
 		{
-			dupplicate[i] = str[i];
-			i++;
+			return (NULL);
+		}
+		else
+		{
+			while (str[i] != '\0')
+			{
+				dupplicate[i] = str[i];
+				i++;
+			}
 		}
 	}
 	dupplicate[i] = '\0';
