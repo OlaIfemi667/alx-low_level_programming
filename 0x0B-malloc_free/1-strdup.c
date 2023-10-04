@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *dupplicate;
-	unsigned int i;
+	unsigned int i, r = 0;
 
 	i = 0;
 
@@ -18,7 +18,6 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	i = 0;
 	if (str == NULL)
 	{
 		return (NULL);
@@ -33,11 +32,8 @@ char *_strdup(char *str)
 		}
 		else
 		{
-			while (str[i] != '\0')
-			{
-				dupplicate[i] = str[i];
-				i++;
-			}
+			for (r = 0; str[r]; r++)
+				dupplicate[r] = str[r];
 		}
 	}
 	dupplicate[i] = '\0';
