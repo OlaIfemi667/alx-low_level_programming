@@ -25,22 +25,29 @@ char *_memset(char *s, char b, unsigned int n)
 	return (s);
 }
 
-/**
- * _calloc - array allocation_memory
- * @nmemb: nombre de membre
- * @size: la taille
- */
 
+
+/**
+ * *_calloc - allocates memory for an array
+ * @nmemb: number of elements in the array
+ * @size: size of each element
+ *
+ * Return: pointer to allocated memory
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	p = malloc(nmemb * size);
+	ptr = malloc(size * nmemb);
 
-	_memset(p, 0, nmemb);
+	if (ptr == NULL)
+		return (NULL);
 
-	return (p);
+	_memset(ptr, 0, nmemb * size);
+
+	return (ptr);
 }
+
