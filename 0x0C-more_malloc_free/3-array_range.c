@@ -10,15 +10,15 @@
 
 int *array_range(int min, int max)
 {
-	int i, taille;
 	int *p;
+	int size, i;
 
 	if (min > max)
 		return (NULL);
-	
-	taille = min + max + 1;
-	
-	p = malloc(sizeof(int) * taille);
+
+	size = max - min + 1;
+
+	p = malloc(sizeof(int) * size);
 
 	if (p == NULL)
 		return (NULL);
@@ -27,4 +27,5 @@ int *array_range(int min, int max)
 		p[i] = min++;
 
 	return (p);
+
 }
