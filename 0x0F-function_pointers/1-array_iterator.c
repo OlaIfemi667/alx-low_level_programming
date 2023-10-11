@@ -5,6 +5,7 @@
  * array_iterator - appliquer une fonction au element dun tableau
  * @size: taille
  * @action: la fonction
+ * @array: tableau
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
