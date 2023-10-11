@@ -1,16 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * f - afficher le parametre
- * @message: le message
- * Return: pointer
- */
-
-void f(char *message)
-{
-	printf("%s\n");
-}
-
+#include "function_pointers.h"
 /**
  * print_name - afficher nom
  * @name: name toprint
