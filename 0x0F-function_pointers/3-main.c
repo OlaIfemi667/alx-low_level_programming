@@ -8,27 +8,36 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int a = atoi(argv[1]), b = atoi(argv[3]);
-	char *oper = argv[2];
+	if (argc == 4)
+	{
+		int a = atoi(argv[1]), b = atoi(argv[3]);
+		char *oper = argv[2];
 
-	if (argc != 4)
+		if (get_op_func(argv[2]) != NULL)
+		{
+			if (b == 0 && (*oper == '/' || *oper == '%'))
+			{
+				printf("Error\n");
+				exit(100);
+			}
+			else
+			{
+				printf("%d\n", (*get_op_func(argv[2]))(a, b));
+				return (0);
+			}
+		}
+		else
+		{
+			printf("Error\n");
+			exit(99);
+		}
+	}
+	else
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (get_op_func(argv[2]) == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	if (b == 0 && (*oper == '/' || *oper == '%'))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-	printf("%d\n", (*get_op_func(argv[2]))(a, b));
 	return (0);
 }
