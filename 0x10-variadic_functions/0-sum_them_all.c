@@ -1,4 +1,4 @@
-#include <STDIO.H>
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
@@ -10,7 +10,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
-	int i, the_sum;
+	unsigned int i, the_sum;
 
 	if (n == 0)
 		return (0);
@@ -19,7 +19,7 @@ int sum_them_all(const unsigned int n, ...)
 	the_sum = 0;
 
 	for (i = 0; i < n; i++)
-		the_sum = va_arg(ap, int);
+		the_sum += va_arg(ap, int);
 	va_end(ap);
-	return (sum);
+	return (the_sum);
 }
