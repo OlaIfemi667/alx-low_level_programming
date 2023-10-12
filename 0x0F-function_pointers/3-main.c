@@ -8,12 +8,12 @@
  * Return: 0
  */
 
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int a = atoi(argv[1]), b = atoi(argv[3]);
 	char *oper = argv[2];
 
-	if(argc != 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
