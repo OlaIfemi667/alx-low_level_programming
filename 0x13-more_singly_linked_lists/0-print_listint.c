@@ -3,6 +3,9 @@
 #include "lists.h"
 
 /**
+ * print_listint - afficher la chaine
+ * @h: la structures
+ * Return: le nombre de noeud
  */
 
 size_t print_listint(const listint_t *h)
