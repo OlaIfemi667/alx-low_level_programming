@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
-#include <math.h>
 
 /**
  * is_binary - verifier if is binary
