@@ -44,13 +44,15 @@ unsigned int binary_to_uint(const char *b)
 	if ((b == NULL) | (is_binary(b) == 0))
 		return (0);
 	i = strlen(b) - 1;
-	for (j = 0; j < strlen(b); j++)
+	j = 0;
+	while (j < strlen(b))
 	{
 		if (b[i] == '0')
 			converted += 0 * _pow_two(j);
 		if (b[i] == '1')
 			converted += 1 * _pow_two(j);
 		i--;
+		j++;
 	}
 	return (converted);
 }
