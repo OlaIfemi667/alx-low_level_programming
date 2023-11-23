@@ -1,7 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <string.h>
 #include "main.h"
+
+/**
+ * _pow - puissance
+ * @base: la base
+ * @exponent: lexposant
+ * Return: puissance de la base
+ */
+int _pow(int base, int exponent)
+{
+	int i, result = 1;
+
+	for (i = 0; i < exponent; ++i)
+	{
+		result *= base;
+	}
+	return (result);
+}
 
 /**
  * print_number - prints an integer;
@@ -24,42 +41,6 @@ void print_number(int n)
 		print_number(n1 / 10);
 
 	_putchar((n1 % 10) + '0');
-}
-
-int _pow(int base, int exponent)
-{
-	int i, result = 1;
-	for (i = 0; i < exponent; ++i)
-	{
-		result *= base;
-	}
-	return result;
-}
-
-/**
- * _strlen - strlen
- * @s: the string
- * Return: length
- */
-
-unsigned int _strlen(char *s)
-{
-	unsigned int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * erreur - erreur
- */
-void erreur(void)
-{
-	printf("Error\n");
-	exit(98);
 }
 
 /**
@@ -90,7 +71,7 @@ int is_digit(char *n)
  */
 int char_to_digit(char *c)
 {
-	int taille = _strlen(c), i, le_digit = 0, puissance = taille - 1;
+	int taille = strlen(c), i, le_digit = 0, puissance = taille - 1;
 
 	for (i = 0; i < taille; i++)
 	{
@@ -113,10 +94,16 @@ int main(int argc, char *argv[])
 	int resultat;
 
 	if (argc != 3)
-		erreur();
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
 	if (is_digit(argv[1]) != 1 || is_digit(argv[2]) != 1)
-		erreur();
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
 	resultat = char_to_digit(argv[1]) * char_to_digit(argv[2]);
 	print_number(resultat);
