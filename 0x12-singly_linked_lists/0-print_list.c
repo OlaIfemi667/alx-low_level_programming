@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  *  print_list - afficher la liste chainée
